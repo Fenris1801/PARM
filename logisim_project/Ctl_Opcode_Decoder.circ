@@ -183,16 +183,22 @@ end TCL_Generic;
       <a name="label" val="Shift"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(70,190)" name="Splitter">
-      <a name="appear" val="right"/>
-      <a name="fanout" val="6"/>
-      <a name="incoming" val="6"/>
-    </comp>
     <comp lib="0" loc="(70,80)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="south"/>
       <a name="label" val="Opcode"/>
       <a name="width" val="6"/>
+    </comp>
+    <comp lib="0" loc="(80,220)" name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="2"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="6"/>
     </comp>
     <comp lib="1" loc="(210,210)" name="NOT Gate"/>
     <comp lib="1" loc="(260,200)" name="AND Gate">
@@ -232,6 +238,9 @@ end TCL_Generic;
     <comp lib="8" loc="(670,145)" name="Text">
       <a name="text" val="Data Processing"/>
     </comp>
+    <wire from="(100,230)" to="(110,230)"/>
+    <wire from="(100,240)" to="(120,240)"/>
+    <wire from="(100,250)" to="(130,250)"/>
     <wire from="(110,230)" to="(110,260)"/>
     <wire from="(110,260)" to="(110,360)"/>
     <wire from="(110,260)" to="(310,260)"/>
@@ -271,9 +280,10 @@ end TCL_Generic;
     <wire from="(380,350)" to="(400,350)"/>
     <wire from="(380,450)" to="(390,450)"/>
     <wire from="(380,60)" to="(420,60)"/>
-    <wire from="(70,80)" to="(70,190)"/>
-    <wire from="(90,230)" to="(110,230)"/>
-    <wire from="(90,240)" to="(120,240)"/>
-    <wire from="(90,250)" to="(130,250)"/>
+    <wire from="(70,220)" to="(80,220)"/>
+    <wire from="(70,80)" to="(70,220)"/>
+    <wire from="(90,230)" to="(100,230)"/>
+    <wire from="(90,240)" to="(100,240)"/>
+    <wire from="(90,250)" to="(100,250)"/>
   </circuit>
 </project>
