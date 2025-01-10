@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.8.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
+<project source="3.9.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -140,7 +140,7 @@
       <circ-port dir="in" pin="160,810" x="130" y="110"/>
       <circ-port dir="in" pin="170,140" x="130" y="90"/>
       <circ-port dir="in" pin="870,120" x="320" y="160"/>
-      <circ-port dir="in" pin="90,220" x="320" y="170"/>
+      <circ-port dir="in" pin="90,220" x="180" y="160"/>
       <circ-port dir="in" pin="90,270" x="210" y="160"/>
       <circ-port dir="in" pin="980,120" x="280" y="160"/>
       <circ-port dir="out" pin="1220,1040" x="320" y="70"/>
