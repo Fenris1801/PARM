@@ -276,9 +276,10 @@ end TCL_Generic;
       <a name="label" val="Cond"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(480,360)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Enable"/>
+    <comp lib="0" loc="(450,360)" name="Constant"/>
+    <comp lib="0" loc="(460,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="IS_Uncond"/>
     </comp>
     <comp lib="0" loc="(510,120)" name="Bit Extender">
       <a name="out_width" val="11"/>
@@ -310,14 +311,13 @@ end TCL_Generic;
       <a name="facing" val="north"/>
       <a name="label" val="IS_Uncond"/>
     </comp>
-    <comp lib="0" loc="(570,370)" name="Constant"/>
+    <comp lib="0" loc="(570,370)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="Enable"/>
+    </comp>
     <comp lib="0" loc="(580,80)" name="Bit Extender">
       <a name="in_width" val="1"/>
       <a name="out_width" val="11"/>
-    </comp>
-    <comp lib="0" loc="(590,390)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="IS_Uncond"/>
     </comp>
     <comp lib="0" loc="(630,360)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -369,7 +369,7 @@ end TCL_Generic;
     <comp lib="1" loc="(340,370)" name="NOT Gate">
       <a name="size" val="20"/>
     </comp>
-    <comp lib="1" loc="(530,350)" name="AND Gate">
+    <comp lib="1" loc="(620,360)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(640,90)" name="AND Gate">
@@ -379,10 +379,10 @@ end TCL_Generic;
     <comp lib="2" loc="(400,340)" name="Multiplexer">
       <a name="select" val="4"/>
     </comp>
+    <comp lib="2" loc="(480,350)" name="Multiplexer"/>
     <comp lib="2" loc="(580,130)" name="Multiplexer">
       <a name="width" val="11"/>
     </comp>
-    <comp lib="2" loc="(610,360)" name="Multiplexer"/>
     <comp lib="3" loc="(290,90)" name="Comparator">
       <a name="width" val="5"/>
     </comp>
@@ -470,19 +470,18 @@ end TCL_Generic;
     <wire from="(340,400)" to="(360,400)"/>
     <wire from="(360,410)" to="(360,470)"/>
     <wire from="(380,420)" to="(380,430)"/>
-    <wire from="(400,340)" to="(500,340)"/>
-    <wire from="(480,360)" to="(500,360)"/>
+    <wire from="(400,340)" to="(450,340)"/>
+    <wire from="(460,370)" to="(460,380)"/>
+    <wire from="(480,350)" to="(590,350)"/>
     <wire from="(510,120)" to="(550,120)"/>
     <wire from="(520,80)" to="(540,80)"/>
-    <wire from="(530,350)" to="(580,350)"/>
     <wire from="(560,150)" to="(560,160)"/>
-    <wire from="(570,370)" to="(580,370)"/>
+    <wire from="(570,370)" to="(590,370)"/>
     <wire from="(580,130)" to="(590,130)"/>
     <wire from="(580,80)" to="(610,80)"/>
     <wire from="(590,100)" to="(590,130)"/>
     <wire from="(590,100)" to="(610,100)"/>
-    <wire from="(590,380)" to="(590,390)"/>
-    <wire from="(610,360)" to="(630,360)"/>
+    <wire from="(620,360)" to="(630,360)"/>
     <wire from="(640,90)" to="(660,90)"/>
   </circuit>
 </project>
