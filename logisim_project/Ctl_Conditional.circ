@@ -363,7 +363,7 @@ end TCL_Generic;
     <comp lib="1" loc="(310,470)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
-    <comp lib="1" loc="(310,510)" name="AND Gate">
+    <comp lib="1" loc="(310,510)" name="OR Gate">
       <a name="size" val="30"/>
     </comp>
     <comp lib="1" loc="(340,370)" name="NOT Gate">
