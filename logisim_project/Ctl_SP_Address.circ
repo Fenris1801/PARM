@@ -225,7 +225,7 @@ end TCL_Generic;
       <a name="label" val="Imm7"/>
       <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(560,260)" name="Tunnel">
+    <comp lib="0" loc="(560,300)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Imm7"/>
       <a name="width" val="7"/>
@@ -239,7 +239,7 @@ end TCL_Generic;
       <a name="label" val="Stack_In"/>
       <a name="width" val="32"/>
     </comp>
-    <comp lib="0" loc="(580,300)" name="Tunnel">
+    <comp lib="0" loc="(580,250)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Stack_In"/>
       <a name="width" val="32"/>
@@ -252,10 +252,12 @@ end TCL_Generic;
     <comp lib="0" loc="(640,170)" name="Bit Extender">
       <a name="in_width" val="7"/>
       <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
     </comp>
-    <comp lib="0" loc="(640,260)" name="Bit Extender">
+    <comp lib="0" loc="(640,300)" name="Bit Extender">
       <a name="in_width" val="7"/>
       <a name="out_width" val="32"/>
+      <a name="type" val="zero"/>
     </comp>
     <comp lib="0" loc="(640,40)" name="Bit Extender">
       <a name="in_width" val="1"/>
@@ -325,19 +327,19 @@ end TCL_Generic;
     <wire from="(190,270)" to="(230,270)"/>
     <wire from="(230,120)" to="(250,120)"/>
     <wire from="(560,170)" to="(600,170)"/>
-    <wire from="(560,260)" to="(600,260)"/>
+    <wire from="(560,300)" to="(600,300)"/>
     <wire from="(570,40)" to="(600,40)"/>
     <wire from="(580,210)" to="(660,210)"/>
-    <wire from="(580,300)" to="(660,300)"/>
+    <wire from="(580,250)" to="(660,250)"/>
     <wire from="(590,80)" to="(700,80)"/>
     <wire from="(640,170)" to="(660,170)"/>
-    <wire from="(640,260)" to="(660,260)"/>
+    <wire from="(640,300)" to="(660,300)"/>
     <wire from="(640,40)" to="(700,40)"/>
     <wire from="(660,170)" to="(660,180)"/>
     <wire from="(660,180)" to="(680,180)"/>
     <wire from="(660,200)" to="(660,210)"/>
     <wire from="(660,200)" to="(680,200)"/>
-    <wire from="(660,260)" to="(660,270)"/>
+    <wire from="(660,250)" to="(660,270)"/>
     <wire from="(660,270)" to="(680,270)"/>
     <wire from="(660,290)" to="(660,300)"/>
     <wire from="(660,290)" to="(680,290)"/>
