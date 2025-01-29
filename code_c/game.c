@@ -88,7 +88,7 @@ int main()
 
             verif = 0;
         }
-        else
+        else if(player_hand == 1 && computer_hand == 2)
         {
             printf("You lose\n");
             printf("     _______                  _______\n");
@@ -99,7 +99,17 @@ int main()
             printf("---.__________)          ---.__(___)\n\n");
             verif = 0;
         }
-
+        else
+        {
+            printf("You win\n");
+            printf("    ________                    _______\n");
+            printf("---'   _____)               ---'   ____)____\n");
+            printf("      (_____)                         ______)\n");
+            printf("      (_____)                     __________)\n");
+            printf("      (_____)                     (____)\n");
+            printf("---.__(____)               ---.__(___)\n\n");
+            verif = 0;
+        }
     }
     return 0;
 }
