@@ -4,3 +4,5 @@ code_c/draft
 .idea
 out/
 *.gz
+assembler/bin
+assembler/obj
