@@ -1,126 +1,78 @@
-#include <stdio.h>
+#include "include/parm.h"
+#include "include/stdio.h"
+#include "include/string.h"
 
-int main()
+void run()
 {
-    //random number generator parameters
+    BEGIN();
+
+    // random number generator parameters
     unsigned int a = 1664525;
     unsigned int b = 10904223;
     unsigned int m = 42947296;
     unsigned int seed;
 
-    //seed entry and generation of random numbers
-    printf("Enter seed: ");
-    scanf("%u", &seed);
-
-    //game loop
+    // game loop
     int verif = 1;
-    int player_hand = 3;
-    int computer_hand = 3;
+    int player_hand;
+    int computer_hand;
     while (verif)
     {
-        printf("\nEnter rock (0), paper (1), scissors (2): ");
-        scanf("%d", &player_hand);
+        PUTCHAR('s', 'e', 'e', 'd', ':');
+        seed = READINT();
+        PUTCHAR('\n');
+        PUTCHAR('R', '(', '0', ')', ',', ' ', 'P', '(', '1', ')', ',', ' ', 'S', '(', '2', ')', ':');
+        player_hand = READINT();
+        PUTCHAR('\n');
         computer_hand = (a * seed + b) % m % 3;
-        if(player_hand == computer_hand)
+        if (player_hand == computer_hand)
         {
-            printf("Tie\n");
+            PUTCHAR('T', 'i', 'e', '\n');
             seed = (a * seed + b) % m;
-            if(player_hand == 0)
-            {
-                printf("    _______                    _______\n");
-                printf("---'   ____)               ---'   ____)\n");
-                printf("      (_____)                     (_____)\n");
-                printf("      (_____)                     (_____)\n");
-                printf("      (____)                      (____)\n");
-                printf("---.__(___)               ---.__(___)\n\n");
-            }
+            if (player_hand == 0)
+                PUTCHAR('R', '(', '0', ')', '\n');
             else if (player_hand == 1)
-            {
-                printf("     _______                  _______\n");
-                printf("---'    ____)____         ---'    ____)_____\n");
-                printf("           ______)                    ______)\n");
-                printf("          _______)                  _______)\n");
-                printf("         _______)                  _______)\n");
-                printf("---.__________)          ---.__________)\n\n");
-            }
+                PUTCHAR('P', '(', '1', ')', '\n');
             else
-            {
-                printf("    _______                 _______\n");
-                printf("---'   ____)____        ---'   ____)____\n");
-                printf("          ______)                  ______)\n");
-                printf("       __________)              __________)\n");
-                printf("      (____)                    (____)\n");
-                printf("---.__(___)               ---.__(___)\n\n");
-            }
+                PUTCHAR('S', '(', '2', ')', '\n');
         }
-        else if(player_hand == 0 && computer_hand == 2)
+        else if (player_hand == 0 && computer_hand == 2)
         {
-            printf("You win\n");
-            printf("    ________                    _______\n");
-            printf("---'   _____)               ---'   ____)____\n");
-            printf("      (_____)                        ______)\n");
-            printf("      (_____)                     __________)\n");
-            printf("      (_____)                     (____)\n");
-            printf("---.__(____)               ---.__(___)\n\n");
+            PUTCHAR('C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ':', ' ', 'S', '(', '2', ')', '\n');
+            PUTCHAR('Y', 'o', 'u', ' ', 'W', 'i', 'n', '\n');
             verif = 0;
         }
-        else if(player_hand == 1 && computer_hand == 0)
+        else if (player_hand == 1 && computer_hand == 0)
         {
-            printf("You win\n");
-            printf("     _______                  _______\n");
-            printf("---'    ____)____         ---'   ____)\n");
-            printf("           ______)              (_____)\n");
-            printf("          _______)              (_____)\n");
-            printf("         _______)               (_____)\n");
-            printf("---.__________)          ---.___(_____)\n\n");
+            PUTCHAR('C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ':', ' ', 'R', '(', '0', ')', '\n');
+            PUTCHAR('Y', 'o', 'u', ' ', 'W', 'i', 'n', '\n');
             verif = 0;
         }
-        else if(player_hand == 2 && computer_hand == 1)
+        else if (player_hand == 2 && computer_hand == 1)
         {
-            
-            printf("You win\n");
-            printf("    _______                   _______\n");
-            printf("---'   ____)____         ---'    ____)____\n");
-            printf("          ______)                   ______)\n");
-            printf("       __________)                  _______)\n");
-            printf("      (____)                      ________)\n");
-            printf("---.__(___)               ---.__________)\n\n");
-
+            PUTCHAR('C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ':', ' ', 'P', '(', '1', ')', '\n');
+            PUTCHAR('Y', 'o', 'u', ' ', 'W', 'i', 'n', '\n');
             verif = 0;
         }
-        else if(player_hand == 1 && computer_hand == 2)
+        else if (player_hand == 1 && computer_hand == 2)
         {
-            printf("You lose\n");
-            printf("     _______                  _______\n");
-            printf("---'    ____)____         ---'   ____)____\n");
-            printf("           ______)                   ______)\n");
-            printf("          _______)               __________)\n");
-            printf("         _______)               (____)\n");
-            printf("---.__________)          ---.__(___)\n\n");
+            PUTCHAR('C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ':', ' ', 'S', '(', '2', ')', '\n');
+            PUTCHAR('Y', 'o', 'u', ' ', 'L', 'o', 'o', 's', 'e', '\n');
             verif = 0;
         }
-        else if(player_hand == 0 && computer_hand== 2 )
+        else if (player_hand == 0 && computer_hand == 2)
         {
-            printf("You win\n");
-            printf("    ________                    _______\n");
-            printf("---'   _____)               ---'   ____)____\n");
-            printf("      (_____)                         ______)\n");
-            printf("      (_____)                     __________)\n");
-            printf("      (_____)                     (____)\n");
-            printf("---.__(____)               ---.__(___)\n\n");
+            PUTCHAR('C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ':', ' ', 'S', '(', '2', ')', '\n');
+            PUTCHAR('Y', 'o', 'u', ' ', 'W', 'i', 'n', '\n');
             verif = 0;
         }
         else
         {
-            printf("You lose\n");
-            printf("    _______                  _______\n");
-            printf("---'   ____)____         ---'   ____)\n");
-            printf("          ______)              (_____)\n");
-            printf("       __________)             (_____)\n");
-            printf("      (____)                   (____)\n");
-            printf("---.__(___)               ---.__(___)\n\n");
+            PUTCHAR('C', 'o', 'm', 'p', 'u', 't', 'e', 'r', ':', ' ', 'R', '(', '0', ')', '\n');
+            PUTCHAR('Y', 'o', 'u', ' ', 'L', 'o', 'o', 's', 'e', '\n');
             verif = 0;
         }
     }
-    return 0;
+
+    END();
 }
