@@ -169,13 +169,13 @@ end TCL_Generic;
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#TTL" name="11"/>
-  <lib desc="file#Controller.circ" name="12"/>
+  <lib desc="file#BancDeRegistres.circ" name="12"/>
   <lib desc="file#ALU.circ" name="13">
     <tool name="ALU">
       <a name="facing" val="east"/>
     </tool>
   </lib>
-  <lib desc="file#BancDeRegistres.circ" name="14"/>
+  <lib desc="file#Controller.circ" name="14"/>
   <main name="Facade"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -2103,6 +2103,11 @@ end TCL_Generic;
       <circ-port dir="out" pin="820,110" x="200" y="20"/>
       <circ-port dir="out" pin="840,140" x="220" y="20"/>
     </appear>
+    <comp lib="0" loc="(1020,260)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="AOut"/>
+      <a name="width" val="32"/>
+    </comp>
     <comp lib="0" loc="(1110,100)" name="Splitter">
       <a name="appear" val="right"/>
       <a name="bit1" val="0"/>
@@ -2159,7 +2164,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(1190,520)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="RAM_OUT"/>
+      <a name="label" val="AOut"/>
       <a name="width" val="32"/>
     </comp>
     <comp lib="0" loc="(1200,120)" name="Tunnel">
@@ -2400,13 +2405,13 @@ end TCL_Generic;
       <a name="label" val="IMM5"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="12" loc="(830,380)" name="Controller">
-      <a name="label" val="Controller_1"/>
-    </comp>
+    <comp lib="12" loc="(880,170)" name="BancRegistre"/>
     <comp lib="13" loc="(340,530)" name="ALU">
       <a name="label" val="ALU_1"/>
     </comp>
-    <comp lib="14" loc="(880,170)" name="BancRegistre"/>
+    <comp lib="14" loc="(830,380)" name="Controller">
+      <a name="label" val="Controller_1"/>
+    </comp>
     <comp lib="2" loc="(1180,120)" name="Multiplexer">
       <a name="width" val="5"/>
     </comp>
@@ -2418,6 +2423,7 @@ end TCL_Generic;
     </comp>
     <wire from="(1020,100)" to="(1020,230)"/>
     <wire from="(1020,100)" to="(1110,100)"/>
+    <wire from="(1020,230)" to="(1020,260)"/>
     <wire from="(1020,230)" to="(1150,230)"/>
     <wire from="(1110,130)" to="(1150,130)"/>
     <wire from="(1130,110)" to="(1150,110)"/>
