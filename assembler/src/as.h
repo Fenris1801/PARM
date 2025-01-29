@@ -10,7 +10,7 @@
 #define WORD_SIZE 4
 
 #define ENTRYPOINT "run:"
-#define OUTPUT_EXT ".txt"
+#define OUTPUT_EXT ".bin"
 
 typedef enum
 {
