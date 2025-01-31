@@ -1,4 +1,5 @@
 # Projet PARM SI3
+## Dorian REYNIER, Mohammed Amine YOUSSEF, Ludovic Clolot, Mohammed Rayene ROAMDAN
 
 Voir la documentation en PDF dans le dossier `doc`.
 
