@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="3.9.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v3.9.0(https://github.com/logisim-evolution/).
+<project source="3.8.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.8.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -178,10 +178,10 @@ end TCL_Generic;
       <text dominant-baseline="central" fill="#404040" font-family="SansSerif" font-size="12" text-anchor="middle" x="82" y="140">Reset</text>
       <text dominant-baseline="central" fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="159" y="170">Load_Store</text>
       <circ-anchor facing="east" x="270" y="60"/>
-      <circ-port dir="in" pin="170,390" x="50" y="140"/>
       <circ-port dir="in" pin="200,560" x="50" y="100"/>
       <circ-port dir="in" pin="200,70" x="50" y="60"/>
       <circ-port dir="in" pin="220,300" x="50" y="120"/>
+      <circ-port dir="in" pin="270,330" x="50" y="140"/>
       <circ-port dir="in" pin="610,40" x="50" y="80"/>
       <circ-port dir="out" pin="270,470" x="270" y="60"/>
       <circ-port dir="out" pin="400,580" x="270" y="80"/>
@@ -193,18 +193,6 @@ end TCL_Generic;
       <a name="facing" val="east"/>
       <a name="label" val="Imm8"/>
       <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(170,330)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Enable"/>
-    </comp>
-    <comp lib="0" loc="(170,360)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Code"/>
-    </comp>
-    <comp lib="0" loc="(170,390)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="label" val="Reset"/>
     </comp>
     <comp lib="0" loc="(190,180)" name="Tunnel">
       <a name="facing" val="south"/>
@@ -266,6 +254,11 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(270,110)" name="Tunnel">
       <a name="label" val="Code"/>
+    </comp>
+    <comp lib="0" loc="(270,330)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="north"/>
+      <a name="label" val="Reset"/>
     </comp>
     <comp lib="0" loc="(270,470)" name="Pin">
       <a name="appearance" val="classic"/>
@@ -366,12 +359,6 @@ end TCL_Generic;
     <comp lib="1" loc="(220,200)" name="NOT Gate">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="1" loc="(240,360)" name="OR Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-      <a name="size" val="30"/>
-    </comp>
     <comp lib="1" loc="(400,250)" name="AND Gate">
       <a name="size" val="30"/>
     </comp>
@@ -396,13 +383,6 @@ end TCL_Generic;
       <a name="text" val="Delay load and hold PC for 1 cycle for the RAM to send out requested data "/>
     </comp>
     <wire from="(150,620)" to="(160,620)"/>
-    <wire from="(170,330)" to="(180,330)"/>
-    <wire from="(170,360)" to="(200,360)"/>
-    <wire from="(170,390)" to="(180,390)"/>
-    <wire from="(180,330)" to="(180,350)"/>
-    <wire from="(180,350)" to="(200,350)"/>
-    <wire from="(180,370)" to="(180,390)"/>
-    <wire from="(180,370)" to="(210,370)"/>
     <wire from="(190,180)" to="(190,210)"/>
     <wire from="(200,240)" to="(200,260)"/>
     <wire from="(200,260)" to="(240,260)"/>
@@ -416,7 +396,6 @@ end TCL_Generic;
     <wire from="(220,450)" to="(220,460)"/>
     <wire from="(220,460)" to="(230,460)"/>
     <wire from="(240,100)" to="(250,100)"/>
-    <wire from="(240,360)" to="(270,360)"/>
     <wire from="(240,490)" to="(240,500)"/>
     <wire from="(240,560)" to="(240,580)"/>
     <wire from="(240,580)" to="(270,580)"/>
@@ -430,7 +409,7 @@ end TCL_Generic;
     <wire from="(250,70)" to="(250,80)"/>
     <wire from="(250,70)" to="(270,70)"/>
     <wire from="(260,470)" to="(270,470)"/>
-    <wire from="(270,310)" to="(270,360)"/>
+    <wire from="(270,310)" to="(270,330)"/>
     <wire from="(300,260)" to="(310,260)"/>
     <wire from="(310,200)" to="(310,260)"/>
     <wire from="(310,260)" to="(370,260)"/>
